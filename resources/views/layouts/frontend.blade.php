@@ -12,11 +12,9 @@
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
 
-    <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="{{ url('/fe/images/content/favicon.png') }} " />
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="{{ url('/fe/css/main.css') }}" />
     <link rel="icon" href="{{ url('/fe/images/content/favicon.png') }}" />
 
     <meta name="theme-color" content="#000" />
@@ -93,7 +91,7 @@
         typeLetter();
 
     </script>
-    <script src="js/app.js"></script>
+    <script src="{{url('fe')}}/js/app.js"></script>
 </body>
 
 </html>
