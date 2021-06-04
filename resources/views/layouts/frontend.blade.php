@@ -38,11 +38,11 @@
 <body>
     <!-- Add your site or application content here -->
 
-    @include('components.frontend.navbar');
+    @include('components.frontend.navbar')
 
-    @yield('content');
+    @yield('content')
 
-    @include('components.frontend.footer');
+    @include('components.frontend.footer')
 
     <!-- START: LOAD SVG -->
     <!-- <svg width="23" height="26" class="hidden" id="icon-play">
@@ -53,44 +53,8 @@
     </svg> -->
     <!-- END: LOAD SVG  -->
 
-    <script>
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
+    @yield('untuk-index')
 
-        async function showLetter(item, selectedIndex) {
-            var selectedIndex = selectedIndex ? selectedIndex : 0
-            var demo_input = document.getElementById('placetextheader');
-
-            if (selectedIndex <= item.length) {
-                var currentIndex = selectedIndex++;
-                demo_input.textContent = item.substr(0, currentIndex);
-                await sleep(50);
-                showLetter(item, selectedIndex);
-            }
-        };
-
-        async function typeLetter() {
-            // var demo_input = document.getElementById('placetextheader')[0];
-
-            var items = [
-                "Anda berkarya.",
-                "berbagi cerita.",
-                "beristirahat dengan nyenyak.",
-                "kehangatan keluarga."
-            ];
-
-            for (var i = 0; i < items.length; i++) {
-                var selectedItem = items[i];
-
-                await sleep(2000);
-                showLetter(selectedItem)
-            }
-        }
-
-        typeLetter();
-
-    </script>
     <script src="{{url('fe')}}/js/app.js"></script>
 </body>
 
